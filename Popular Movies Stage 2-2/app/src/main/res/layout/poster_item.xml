@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:background="@color/cardview_dark_background">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv_popular_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/layout_margin_two"
+
+        card_view:cardCornerRadius="@dimen/padding_twenty">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_poster_image"
+                android:contentDescription="@string/poster_image_alt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@android:color/holo_red_light"/>
+
+            <TextView
+                android:id="@+id/tv_movie_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/item_poster_image"
+                android:padding="@dimen/padding_ten"
+                android:textColor="@color/colorAccent"
+                android:textSize="@dimen/card_view_text_size"
+                android:textAlignment="center" />
+
+       </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>
